@@ -1,0 +1,137 @@
+@import 'mixins.scss';
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"),
+       url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Semibold.woff2") format("woff2"),
+       url("../fonts/Lato-Semibold.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"),
+       url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  @include font(25px, 160%);
+  color: rgba(51, 26, 47, 0.8);
+}
+
+p.__font-small {
+  @include font(16px, 20px);
+  color: rgba(51, 26, 47, 0.5);
+}
+
+h6 {
+  font-weight: 600;
+  @include font(18px, 25px);
+  color: #331A2F;
+}
+
+h5 {
+  font-weight: 600;
+  @include font(24px, 150%);
+  color: #331A2F;
+}
+
+h4 {
+  font-weight: 600;
+  @include font(35px, 45px);
+  color: #331A2F;
+}
+
+h3 {
+  font-weight: 600;
+  @include font(42px, 55px);
+  color: #331A2F;
+}
+
+h2 {
+  font-weight: 700;
+  @include font(48px, 64px);
+  color: #331A2F;
+}
+
+h1 {
+  font-weight: 700;
+  @include font(56px, 80px);
+  color: #000000;
+}
+
+@media screen and (max-width: 1280px) {
+  body {
+    @include font(20px, 160%);
+  }
+
+  p.__font-small {
+    @include font(16px, 160%);
+  }
+
+  h6 {
+    @include font(16px, 150%);
+  }
+
+  h5 {
+    @include font(20px, 150%);
+  }
+
+  h4 {
+    @include font(30px, 45px);
+  }
+
+  h3 {
+    @include font(38px, 55px);
+  }
+
+  h2 {
+    @include font(40px, 50px);
+  }
+
+  h1 {
+    @include font(46px, 65px);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    @include font(18px, 160%);
+  }
+
+  p.__font-small {
+    @include font(16px, 160%);
+  }
+
+  h6 {
+    @include font(16px, 150%);
+  }
+
+  h5 {
+    @include font(18px, 150%);
+  }
+
+  h4 {
+    @include font(20px, 150%);
+  }
+
+  h3 {
+    @include font(22px, 150%);
+  }
+
+  h2 {
+    @include font(24px, 150%);
+  }
+
+  h1 {
+    @include font(26px, 150%);
+  }
+}
