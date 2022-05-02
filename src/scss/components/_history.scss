@@ -1,0 +1,108 @@
+@use '../mixins' as mixins;
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    max-width: 844px;
+    text-align: center;
+    margin-bottom: 100px;
+
+    @include mixins.tablet-landscape {
+      max-width: 652px;
+    }
+
+    @include mixins.tablet {
+      margin-bottom: 90px;
+    }
+
+    @include mixins.phone {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    @include mixins.phone {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    max-width: 750px;
+
+    @include mixins.tablet-landscape {
+      max-width: 563px;
+    }
+    @include mixins.tablet {
+      max-width:428px;
+    }
+    @include mixins.phone {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__shop-image {
+    width: 456px;
+    aspect-ratio: 1 / 1;
+    background-image: url(/src/img/shop_large.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 82px;
+
+    @include mixins.tablet-landscape-only {
+      width: 352px;
+      min-width: 270px;
+      background-image: url(/src/img/shop_medium.png);
+    }
+    @include mixins.tablet {
+      width: 270px;
+      min-width: 125px;
+      background-image: url(/src/img/shop_small.png);
+      margin-right:40px;
+    }
+    @include mixins.phone {
+      min-width: none;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__laptop-image {
+    width: 474px;
+    aspect-ratio: 1 / 1;
+    background-image: url(/src/img/laptop_large.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 82px;
+
+    @include mixins.tablet-landscape-only {
+      width: 358px;
+      min-width: 270px;
+      background-image: url(/src/img/laptop_medium.png);
+    }
+    @include mixins.tablet {
+      width: 270px;
+      min-width: 125px;
+      background-image: url(/src/img/laptop_small.png);
+      margin-left: 40px;
+    }
+    @include mixins.phone {
+      min-width: none;
+      max-width: 100%;
+      margin-left: 0;
+      margin-bottom: 17px;
+    }
+  }
+}
