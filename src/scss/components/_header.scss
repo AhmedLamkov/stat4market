@@ -1,0 +1,315 @@
+@use '../mixins' as mixins;
+@use '../fonts';
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 1530px;
+    margin: 48px auto 66px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    @include mixins.tablet {
+        padding: 0 15px;
+    }
+
+    @include mixins.phone {
+        padding: 0 15px;
+    }
+
+    &__logo {
+        width: 163px;
+        height: 32px;
+        background-image: url(/src/img/logo_Large.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        align-self: center;
+        margin-right: 44px;
+
+        @include mixins.laptop {
+            width: 126px;
+            height: 25px;
+            background: url(/src/img/logo_middle.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 3%;
+            
+        }
+        
+        @include mixins.tablet {
+            margin-right: 5%;
+        }
+        @include mixins.phone {
+            width: 95px;
+            height: 18px;
+            background: url(/src/img/logo_small.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 0; 
+        }
+        
+    }
+
+    &__logo-icon {
+        width: 60px;
+        height: 58px;
+        background: url(/src/img/logo-icon_Large.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 18px;
+
+        @include mixins.laptop {
+            width: 47px;
+            height: 44px;
+            background: url(/src/img/logo-icon_middle.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 1%;
+        }
+
+        @include mixins.tablet {
+            margin-right: 1%;
+        }
+        @include mixins.phone {
+            width: 35px;
+            height: 32px;
+            background: url(/src/img/logo-icon_small.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 3%;
+        }
+       
+    }
+
+    &__title {
+        width: 204px;
+        font-size: 14px;
+        line-height: 18px;
+        position: relative;
+        margin-right: 31px;
+
+        @include mixins.laptop {
+            width: 158px;
+            font-size: 10px;
+            line-height: 14px;
+            margin-right: 2%;
+        }
+
+        @include mixins.tablet-landscape {
+            margin-right: 0;
+        }
+
+        @include mixins.phone {
+            display: none;
+        }
+
+        &:before {
+            content: "";
+            background: #331A2F80;
+            width: 2px;
+            height: 80px;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mixins.laptop {
+                height: 62px;
+            }
+         }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 50px;
+        @extend h5;
+
+        @include mixins.desktop {
+            &:last-child {
+                margin-right: 14%;
+            }
+        }
+
+        @include mixins.laptop {
+            margin-right: 5%;
+        }
+
+        @include mixins.tablet-landscape {
+            display: none;
+        }
+
+        &-icon {
+            width: 13px;
+            height: 12px;
+            margin-left: 11px;
+
+            @include mixins.laptop {
+                margin-right: 0;
+            }
+
+            @include mixins.tablet {
+                display: none;
+            }
+            
+        }
+    }
+
+    &__number {
+        @extend h5;
+        margin-left: auto;
+        margin-right: 6%;
+        text-decoration: none;
+        color: #331A2F;
+        flex-shrink: 0;
+
+        @include mixins.laptop {
+            margin: 0 auto;
+        }
+
+        @include mixins.tablet-landscape {
+            display: none;
+        }
+
+        &-image {
+            width: 19px;
+            height: 19px;
+
+            @include mixins.laptop {
+                width: 15px;
+                height: 15px;
+            }
+
+            @include mixins.tablet-landscape {
+                display: none;
+            }
+        }
+    
+        &-text {
+            width: 203px;
+            @extend h5;
+            @include mixins.laptop {
+                width: 152px;
+            }
+
+            @include mixins.tablet-landscape {
+                display: none;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        padding: 4px 32px 5px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        background-image: linear-gradient(264.91deg, #7C4EAB 0.73%, #DD51D4 95.85%);
+        text-decoration: none;
+        color: white;
+        @include mixins.laptop {
+            height: 43px;
+            padding: 4px 32px 4px;
+            margin-left: 10px;
+        }
+        
+        @include mixins.tablet-landscape {
+            margin: 0 78px 0 auto;
+        }
+        
+        @include mixins.tablet {
+            margin: 0 auto;
+        }
+
+        @include mixins.phone {
+            height: 36px;
+            padding: 4px 20px;
+            margin: 0 22px 0 auto;
+        }
+
+        @include mixins.small-phone {
+            margin: 0 auto;
+        }
+    }
+
+    &__btn-icon {
+        width: 23px;
+        height: 23px;
+        margin-right: 14px;
+
+        @include mixins.laptop {
+            width: 20px;
+            height: 20px;
+        }
+        @include mixins.phone {
+            width: 13px;
+            height: 13px;
+            margin-right: 8px;
+
+        }
+    }
+
+    &__btn-text {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 500;
+
+        @include mixins.laptop {
+            font-size: 18px;
+            line-height: 35px;
+        }
+        @include mixins.phone {
+            font-size: 14px;
+            line-height: 27px;
+        }
+        
+    }
+
+    &__burger {
+        display: none;
+        @include mixins.tablet-landscape {
+            display: block;
+            position: relative;
+            width: 42px;
+            height: 28px;
+            cursor: pointer;
+    
+            & span,
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                height: 4px;
+                background-color: #CF51CE;
+                border-radius: 4px;
+            }
+    
+            & span,
+            &::before {
+                width: 100%;
+            }
+    
+            &::before {
+                top: 0;
+            }
+    
+            &::after { 
+                bottom: 0;
+                right: 0;
+                width: calc(100% - 10px);
+            }
+    
+            & span {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+
+

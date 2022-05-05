@@ -1,0 +1,134 @@
+@use '../mixins' as mixins;
+
+.courses {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin-bottom: 147px;
+
+    @include mixins.laptop {
+        margin-bottom: 77px;
+    }
+
+    @include mixins.tablet {
+        margin-bottom: 65px;
+    }
+
+    @include mixins.small-phone {
+        margin-bottom: 85px;
+    }
+
+    &__description {
+        width: 880px;
+        margin-right: 42px;
+
+        @include mixins.laptop {
+            width: 60%;
+            margin-right: 31px;
+        }
+
+        @include mixins.tablet {
+            width: 100%;
+            margin-right: 0;
+        }
+
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 26px;
+        
+        @include mixins.laptop {
+            margin-bottom: 40px;
+        }
+
+        @include mixins.tablet {
+            margin-bottom: 18px;
+        }
+
+        @include mixins.small-phone {
+            width: 202px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__title-price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        @include mixins.laptop {
+            margin-bottom: 40px;
+        }
+
+        @include mixins.tablet {
+            margin-bottom: 16px;
+        }
+        
+    }
+    &__price-text{
+        font-size: 35px;
+        line-height: 29px;
+
+        
+    }
+    &__title-icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 25px;
+      }
+
+    &__text {
+        margin-bottom: 15px;
+        width: 100%;
+
+        @include mixins.tablet {
+            width: 65%;
+        }
+
+        @include mixins.phone {
+            width: 60%;
+        }
+
+        @include mixins.small-phone {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        width: 620px;
+        height: 604px;
+        background-image: url(/src/img/superman_large.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+        @include mixins.laptop {
+            width: 458px;
+            height: 458px;
+            background-image: url(/src/img/superman_medium.png);
+        }
+
+        @include mixins.tablet {
+            position: absolute;
+            width: 410px;
+            height: 410px;
+            background-image: url(/src/img/superman_small.png);
+            right: -185px;
+            top: 150px;
+        }
+
+        @include mixins.phone {
+            width: 330px;
+            height: 330px;
+            top: 300px;
+        }
+
+        @include mixins.small-phone {
+            width: 245px;
+            height: 245px;
+            right: -125px;
+            top: -50px;
+        }
+    }
+}

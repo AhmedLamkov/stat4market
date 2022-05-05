@@ -1,0 +1,15 @@
+@use '../mixins' as mixins;
+
+.container {
+    max-width: 1530px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include mixins.tablet {
+        padding: 0 15px;
+    }
+}

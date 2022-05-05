@@ -1,0 +1,23 @@
+@use './mixins' as mixins;
+
+.color-pink {
+  color: #CF51CE;
+}
+.pink-underline {
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 5px;
+    border-radius: 2px;
+    background: linear-gradient(264.91deg, #7C4EAB 0.73%, #DD51D4 95.85%);
+  }
+}
+
+  
+
+

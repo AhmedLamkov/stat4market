@@ -10,7 +10,7 @@
     text-align: center;
     margin-bottom: 100px;
 
-    @include mixins.tablet-landscape {
+    @include mixins.laptop {
       max-width: 652px;
     }
 
@@ -18,7 +18,7 @@
       margin-bottom: 90px;
     }
 
-    @include mixins.phone {
+    @include mixins.small-phone {
       margin-bottom: 60px;
     }
   }
@@ -33,7 +33,7 @@
       flex-direction: row-reverse;
     }
 
-    @include mixins.phone {
+    @include mixins.small-phone {
       flex-direction: column;
     }
   }
@@ -41,14 +41,14 @@
   &__text {
     max-width: 750px;
 
-    @include mixins.tablet-landscape {
+    @include mixins.laptop {
       max-width: 563px;
     }
     @include mixins.tablet {
       max-width:428px;
     }
-    @include mixins.phone {
-      margin-bottom: 22px;
+    @include mixins.small-phone {
+      margin-bottom: 40px;
     }
   }
 
@@ -60,7 +60,7 @@
     background-repeat: no-repeat;
     margin-right: 82px;
 
-    @include mixins.tablet-landscape-only {
+    @include mixins.laptop {
       width: 352px;
       min-width: 270px;
       background-image: url(/src/img/shop_medium.png);
@@ -71,11 +71,9 @@
       background-image: url(/src/img/shop_small.png);
       margin-right:40px;
     }
-    @include mixins.phone {
-      min-width: none;
-      max-width: 100%;
-      margin-right: 0;
-      margin-bottom: 17px;
+    @include mixins.small-phone {
+      min-width: 0;
+      margin-bottom: 30px;
     }
   }
 
@@ -86,8 +84,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 82px;
+    margin-bottom: 145px;
 
-    @include mixins.tablet-landscape-only {
+    @include mixins.laptop {
       width: 358px;
       min-width: 270px;
       background-image: url(/src/img/laptop_medium.png);
@@ -98,8 +97,8 @@
       background-image: url(/src/img/laptop_small.png);
       margin-left: 40px;
     }
-    @include mixins.phone {
-      min-width: none;
+    @include mixins.small-phone {
+      min-width: 0;
       max-width: 100%;
       margin-left: 0;
       margin-bottom: 17px;

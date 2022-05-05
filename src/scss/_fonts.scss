@@ -9,6 +9,13 @@
 
 @font-face {
   font-family: "Lato";
+  src: url("../fonts/Lato-Medium.woff2") format("woff2"),
+       url("../fonts/Lato-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Lato";
   src: url("../fonts/Lato-Semibold.woff2") format("woff2"),
        url("../fonts/Lato-Semibold.woff") format("woff");
   font-weight: 600;
@@ -27,8 +34,8 @@ body {
   color: rgba(51, 26, 47, 0.8);
 }
 
-p.__font-small {
-  @include mixins.font(16px, 20px);
+p.font-small {
+  @include mixins.font(18px, 160%);
   color: rgba(51, 26, 47, 0.5);
 }
 
@@ -68,12 +75,12 @@ h1 {
   color: #000000;
 }
 
-@include mixins.tablet-landscape {
+@include mixins.laptop {
   body {
     @include mixins.font(20px, 160%);
   }
 
-  p.__font-small {
+  p.font-small {
     @include mixins.font(16px, 160%);
   }
 
@@ -102,12 +109,12 @@ h1 {
   }
 }
 
-@include mixins.phone {
+@include mixins.small-phone {
   body {
     @include mixins.font(18px, 160%);
   }
 
-  p.__font-small {
+  p.font-small {
     @include mixins.font(16px, 160%);
   }
 
