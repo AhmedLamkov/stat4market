@@ -6,13 +6,14 @@
   "scripts": {
     "start": "webpack serve --progress",
     "build": "webpack --progress",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
