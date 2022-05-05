@@ -36,10 +36,20 @@
     </div>
   </header>
   <div class="container">
-    <div class="breadcrumbs">
-      <a class="breadcrumbs__item" href="#">Главная</a>
-      <a class="breadcrumbs__item" href="#">Обучение</a>
-    </div>
+    <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="#" itemprop="name">
+          Главная
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a  href="#" itemprop="name">
+          Обучение
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ul>
     <div class="courses">
       <div class="courses__description">
         <h1 class="courses__title"> <span class="color-pink">Обучающие курсы</span> для поставщиков на маркетплейсы</h1>

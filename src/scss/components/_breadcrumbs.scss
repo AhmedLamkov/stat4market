@@ -10,10 +10,13 @@
 
     &__item {
         position: relative;
-        text-decoration: none;
         font-size: 16px;
         line-height: 20px;
-        color: rgba(51, 26, 47, 0.5);
+        
+        a {
+            text-decoration: none;
+            color: rgba(51, 26, 47, 0.5);
+        }
       
         &:not(:first-child) {
             margin-left: 26px;
